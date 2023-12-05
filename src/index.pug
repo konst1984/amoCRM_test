@@ -1,0 +1,84 @@
+include includes/_socails
+include includes/_present
+
+doctype html
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="stylesheet" href="style.css")
+    title Document
+body
+    header.header
+        .container
+            .header-content
+                .logo
+                    a.logo__link(href="")
+                        img(src="./images/logo_welbex.svg" alt="logo welbex")
+                    .logo__text
+                        p крупный интегратор CRM
+                        p в Росcии и ещё 8 странах
+                nav.nav
+                    ul.nav__list
+                      each val in ["Услуги" , "Виджеты","Интеграции","Кейсы", "Сертификаты"]
+                          li.nav__item
+                              a.nav__link(href="#")= val
+                .header-contacts
+                    a(href="tel:+75555555555") +7&nbsp;555&nbsp;555-55-55
+                    +socals-links('socials-header')
+    main
+        .container
+            .main-content
+                .main-slogan
+                    .main-slogan__title-text
+                        p Зарабатывайте больше
+                        p.text-gradient.text-upper c WELBEX
+                    p.main-slogan__subtitle-text Развиваем и контролируем продажи за вас
+                .main-present
+                    .main-present__title-text
+                        p Вместе с <span class="text-gradient text-upper">бесплатной</span>
+                        p <span class="text-gradient text-upper">консультацией</span> мы дарим:
+                    .main-present__body
+                        +present('Виджеты','30 готовыx решений')
+                        +present('Dashboard','с показателями вашего бизнеса')
+                        +present('Skype Аудит','отдела продаж и CRM системы')
+                        +present('35 дней','использования CRM')
+                        +present-mobile('Skype Аудит')
+                        +present-mobile('30 виджетов')
+                        +present-mobile('Dashboard')
+                        +present-mobile('Месяц аmoCRM')
+                    button.button Получить консультацию
+    footer.footer
+        .container
+            .footer-content
+                .footer-list.footer-about
+                    h4.footer-list__title.text-upper.text-grey О компании
+                    ul.list
+                        li
+                            a(href="") Партнерская программа
+                        li
+                            a(href="") Вакансии
+                .footer-list.footer-menu
+                    h4.footer-list__title.text-upper.text-grey Меню
+                    .footer-menu__content
+                        ul.list
+                          each val in ["Расчет стоимости","Услуги" , "Виджеты","Интеграции","Наши клиенты"]
+                              li
+                                  a(href="#")= val
+                        ul.list
+                          each val in ["Кейсы","Благодарственные письма" ,"Сертификаты","Блог на Youtube","Вопрос / Ответ"]
+                              li
+                                  a(href="#")= val
+                        ul.list
+                          each val in ["Благодарность клиентов","Кейсы" ,"Сертификаты","Блог на Youtube","Вопрос / Ответ"]
+                              li
+                                  a(href="#")= val
+                .footer-list.footer-contacts
+                    h4.footer-list__title.text-upper.text-grey Контакты
+                    a(href="tel:+75555555555") +7&nbsp;555&nbsp;555-55-55
+                    +socals-links('socials-footer')
+                    p Москва, Путевой проезд 3с1, к 902
+            .copyright
+                p ©WELBEX 2022. Все права защищены.
+                a(href="#") Политика конфиденциальности
+script(src='./main.js' type="module")
