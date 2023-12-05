@@ -34,7 +34,6 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: var(--color-text-primary);
-	padding: 0 15px;
 }
 
 a {
@@ -64,8 +63,9 @@ main{
 
 .container{
 	width: 100%;
-	max-width: 1140px;
+	max-width: 1170px;
 	margin: auto;
+	padding: 0 15px;
 }
 
 .text-grey{
@@ -242,16 +242,6 @@ a:has(img){
 	font-size: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .footer-content{
 	display: grid;
 	grid-template-columns: auto 1fr auto;
@@ -414,6 +404,9 @@ a:has(img){
 }
 
 @media (max-width: 479px){
+	body{
+		background-image: url('images/bg320.png');
+	}
 	
 	.header-content{
 		padding-top: 20px;
@@ -477,6 +470,10 @@ a:has(img){
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
+	}
+	
+	.footer{
+		background-color: var(--color-dark);
 	}
 	
 	.footer-menu__content {

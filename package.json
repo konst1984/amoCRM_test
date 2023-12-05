@@ -6,12 +6,14 @@
   "type": "module",
   "scripts": {
     "start": "parcel src/index.pug --open",
-    "build": "parcel build src/index.pug -d dist"
+    "build": "parcel build src/index.pug -d dist --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.1.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
